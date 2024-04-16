@@ -133,6 +133,7 @@ main p {
 .grid-3-col .map {
   width: 100%;
   border: none;
+  aspect-ratio: 1 / 1;
 }
 
 section .card {
@@ -289,7 +290,7 @@ footer h3 {
     display: none;
   }
   .secondary .map {
-    width: 100%;
+    aspect-ratio: 9 / 3;
   }
   .gallery-grid-3-col {
     grid-template-columns: repeat(2, 1fr);
