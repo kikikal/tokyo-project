@@ -2,17 +2,35 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
-h1 {
+h1, h2, h3 {
+    padding: 0;
+    margin: 0;
+      line-height: 1.5;
+
+}
+
+header {
+  text-align: center;
+  color: white;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("../images/tokyo-hero.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 180px 0;
+}
+
+header h1 {
   font-size: 96px;
   font-weight: 700;
 }
 
-h2 {
+header h2 {
   font-size: 40px;
   font-weight: 400;
+ margin-bottom: 32px;
 }
 
-h3 {
+header h3 {
   font-size: 24px;
   font-weight: 900;
   letter-spacing: 5px;
@@ -29,31 +47,81 @@ header a {
   text-decoration: none;
 }
 
-header {
-  text-align: center;
-  color: white;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url("../images/tokyo-hero.jpeg");
-  background-repeat: no-repeat;
+footer {
+  background-image: linear-gradient(
+      rgba(39, 32, 68, 0.9),
+      rgba(39, 32, 68, 0.9)
+    ),
+    url("../images/tokyo-footer.jpeg");
   background-size: cover;
-  padding: 180px 0;
+  background-repeat: no-repeat;
+  color: white;
+}
+
+.col {
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr;
+  grid-column-gap: 64px;
+  padding: 80px 120px;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+footer a {
+  padding-bottom: 8px;
+  color: white;
+  text-decoration: none;
+}
+
+footer ul,
+footer p {
+  font-size: 16px;
+  font-weight: 400;
   line-height: 1.5;
+  text-align: left;
+  opacity: 70%;
+}
+
+footer h3 {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.5;
+  text-align: left;
+  margin: 0;
+  padding: 0 0 8px 0;
 }
 
 @media (max-width: 900px) {
-    h1 {
-        font-size: 60px;
-    }
-    h2 {
-        font-size: 25px;
-    }
-    h3 {
-        font-size: 16px;
-    }
-    header a {
-        font-size: 10px
-    }
-    header {
-        line-height: 1;
-    }
+  header h1 {
+    font-size: 60px;
+  }
+  header h2 {
+    font-size: 25px;
+  }
+  header h3 {
+    font-size: 16px;
+  }
+  header a {
+    font-size: 10px;
+  }
+  header {
+    line-height: 1;
+    padding: 120px 40px;
+  }
+  .col {
+    display: block;
+    padding: 40px 40px;
+  }
+  footer h3 {
+    font-size: 16px;
+    padding-bottom: 0;
+  }
+  footer ul,
+  footer p {
+    font-size: 12px;
+    padding-bottom: 12px;
+  }
 }
